@@ -1,11 +1,11 @@
 addLayer("l", {
     color: "#000000",
     tabFormat: {
-        Alpha: {
+        Upgrades: {
             embedLayer: "U",
             buttonStyle: { "border-color": "#ffffff", "border-width": "2px", "border-radius": "1px" },
         },
-        Beta: {
+        Rebirth: {
             embedLayer: "R",
             buttonStyle: { "border-color": "#ffffff", "border-width": "2px", "border-radius": "1px" },
         },
