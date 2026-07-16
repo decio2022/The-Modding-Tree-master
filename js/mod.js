@@ -1,19 +1,20 @@
 let modInfo = {
-	name: "The ??? Tree",
-	author: "nobody",
-	pointsName: "points",
-	modFiles: ["layers.js", "tree.js"],
-
+	name: "The Modding Tree",
+	id: "mymod",
+	author: "decio2022",
+	pointsName: "cash",
 	discordName: "",
 	discordLink: "",
-	initialStartPoints: new Decimal (10), // Used for hard resets and new players
+	modFiles: ["tree.js"],
+	initialStartPoints: new ExpantaNum (10), // Used for hard resets and new players
+	
 	offlineLimit: 1,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
 	num: "0.0",
-	name: "Literally nothing",
+	name: "",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -28,21 +29,12 @@ let winText = `Congratulations! You have reached the end and beaten this game, b
 var doNotCallTheseFunctionsEveryTick = ["blowUpEverything"]
 
 function getStartPoints(){
-    return new Decimal(modInfo.initialStartPoints)
+    return new ExpantaNum(modInfo.initialStartPoints)
 }
 
 // Determines if it should show points/sec
 function canGenPoints(){
 	return true
-}
-
-// Calculate points/sec!
-function getPointGen() {
-	if(!canGenPoints())
-		return new Decimal(0)
-
-	let gain = new Decimal(1)
-	return gain
 }
 
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
@@ -55,17 +47,12 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return false
 }
 
 
 
 // Less important things beyond this point!
-
-// Style for the background, can be a function
-var backgroundStyle = {
-
-}
 
 // You can change this if you have things that can be messed up by long tick lengths
 function maxTickLength() {
