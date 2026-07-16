@@ -30,10 +30,6 @@ addLayer("tree-tab", {
             embedLayer: "l",
             buttonStyle: { "border-color": "#43e06d" },
         },
-        Rebirth: {
-            embedLayer: "R",
-            buttonStyle: { "border-color": "#fcf93f" },
-        },
     },
     previousTab: "",
     leftTab: true,
