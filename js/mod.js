@@ -7,7 +7,7 @@ let modInfo = {
 	discordLink: "",
 	modFiles: ["tree.js"],
 	initialStartPoints: new Decimal(1), // Used for hard resets and new players
-	
+	allowSmall: false,
 	offlineLimit: 1,  // In hours
 }
 
