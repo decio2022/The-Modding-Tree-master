@@ -45,6 +45,10 @@ function addedPlayerData() { return {
 var displayThings = [
 ]
 
+var backgroundStyle = {
+	
+}
+
 // Determines when the game "ends"
 function isEndgame() {
 	return false
